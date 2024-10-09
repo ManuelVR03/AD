@@ -1,0 +1,12 @@
+Ejercicio 2
+
+-CRUD
+    -CREATE
+    -READ
+    -UPDATE
+    -DELETE
+
+-DML
+    Lenguaje de Manipulación de datos
+-DDL
+    Lenguaje de Definición de datos
