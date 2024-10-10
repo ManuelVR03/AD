@@ -3,4 +3,9 @@
     <fullyQualifiedTypeName name="jakarta.persistence.Persistence"/>
     <fullyQualifiedTypeName name="jakarta.persistence.EntityManager"/>
     <fullyQualifiedTypeName name="util.UtilJPA"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.EntityTransaction"/>
+    <fullyQualifiedTypeName name="entity.Libro"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.TypedQuery"/>
+    <fullyQualifiedTypeName name="JPAControladorDao.LibroFacadeImpl"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
