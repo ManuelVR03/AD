@@ -2,7 +2,7 @@ package JPAControladorDao;
 
 import java.util.List;
 
-import entity.Libro;
+import entidades.Libro;
 import jakarta.persistence.TypedQuery;
 
 public class LibroFacadeImpl extends AbstractFacadeJPAImpl<Libro> implements LibroFacade{

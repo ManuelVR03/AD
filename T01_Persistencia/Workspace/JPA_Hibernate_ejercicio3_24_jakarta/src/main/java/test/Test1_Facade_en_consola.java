@@ -4,7 +4,7 @@ import java.util.List;
 
 import JPAControladorDao.LibroFacadeImpl;
 import JPAControladorDao.SocioFacadeImpl;
-import entity.*;
+import entidades.*;
 
 public class Test1_Facade_en_consola {
 
