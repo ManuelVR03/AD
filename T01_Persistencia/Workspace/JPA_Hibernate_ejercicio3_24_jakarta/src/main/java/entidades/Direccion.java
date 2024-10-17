@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "DIRECCION", catalog = "ejercicio3")
-public class Direccion implements Serializable{
+public class Direccion implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -29,7 +29,8 @@ public class Direccion implements Serializable{
 	@Column(name = "CODIGOPOSTAL")
 	private Long codigoPostal;
 
-	public Direccion() {}
+	public Direccion() {
+	}
 
 	public Direccion(Long idDireccion, String calle, String ciudad, String pais, Long codigoPostal) {
 		this.idDireccion = idDireccion;
@@ -84,6 +85,7 @@ public class Direccion implements Serializable{
 		return "Direccion [idDireccion=" + idDireccion + ", calle=" + calle + ", ciudad=" + ciudad + ", pais=" + pais
 				+ ", codigoPostal=" + codigoPostal + "]";
 	}
+
 	
-	
+
 }

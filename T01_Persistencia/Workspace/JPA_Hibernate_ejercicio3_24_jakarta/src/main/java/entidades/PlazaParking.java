@@ -5,32 +5,52 @@ import java.io.Serializable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table (name = "PLAZAPARKING", catalog = "ejercicio3")
-public class PlazaParking implements Serializable{
+@Table(name = "PLAZAPARKING", catalog = "ejercicio3")
+public class PlazaParking implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
-	@Column (name = "NUMPLAZA", unique = true, nullable = false)
+	@Column(name = "NUMPLAZA", unique = true, nullable = false)
 	private String numPlaza;
-	
+
 	@Column(name = "PLANTA")
 	private Integer planta;
-	
-	@Column (name = "LUGAR")
+
+	@Column(name = "LUGAR")
 	private Integer lugar;
 
+	@OneToOne(mappedBy = "plaza")
+	@JoinColumn(unique = true, nullable = false, updatable = false)
+	private Empleado empleado;
+
 	public PlazaParking() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public PlazaParking(String numPlaza, Integer planta, Integer lugar) {
 		this.numPlaza = numPlaza;
 		this.planta = planta;
 		this.lugar = lugar;
+	}
+
+	public PlazaParking(String numPlaza, Integer planta, Integer lugar, Empleado empleado) {
+		this.numPlaza = numPlaza;
+		this.planta = planta;
+		this.lugar = lugar;
+		this.empleado = empleado;
+	}
+
+	public Empleado getEmpleado() {
+		return empleado;
+	}
+
+	public void setEmpleado(Empleado empleado) {
+		this.empleado = empleado;
 	}
 
 	public String getNumPlaza() {
@@ -63,4 +83,5 @@ public class PlazaParking implements Serializable{
 	}
 	
 	
+
 }
