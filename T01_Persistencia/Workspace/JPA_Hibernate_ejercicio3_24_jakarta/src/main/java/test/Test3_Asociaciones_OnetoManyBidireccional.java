@@ -3,7 +3,7 @@ package test;
 import entidades.*;
 import JPAControladorDao.*;
 
-public class Test2_Asociaciones_OnetoManyUnidireccional {
+public class Test3_Asociaciones_OnetoManyBidireccional {
 
 	public static void main(String[] args) {
 
@@ -18,10 +18,14 @@ public class Test2_Asociaciones_OnetoManyUnidireccional {
 			
 			Departamento dep1 = new Departamento(1, "contabilidad", 10000.);
 			
+			Proyecto pr1 = new Proyecto(1, "Junta de Andalucía");
+			Proyecto pr2 = new Proyecto(2, "Turismo Conil");
+			
 			PlazaParkingFacadeJPAImpl pf = new PlazaParkingFacadeJPAImpl();
 			DireccionFacadeJPAImpl df = new DireccionFacadeJPAImpl();
 			EmpleadoFacadeJPAImpl ef = new EmpleadoFacadeJPAImpl();
 			DepartamentoFacadeJPAImpl dpf = new DepartamentoFacadeJPAImpl();
+			ProyectoFacadeJPAImpl prf = new ProyectoFacadeJPAImpl();
 			
 			//El orden es importante
 			
@@ -46,6 +50,12 @@ public class Test2_Asociaciones_OnetoManyUnidireccional {
 			dep1.addEmpleado(e1);
 			dep1.addEmpleado(e2);
 			dpf.create(dep1);
+			
+			//Proyectos
+			dep1.addProyecto(pr1);
+			dep1.addProyecto(pr2);
+			prf.create(pr1);
+			prf.create(pr2);
 
 			
 			
