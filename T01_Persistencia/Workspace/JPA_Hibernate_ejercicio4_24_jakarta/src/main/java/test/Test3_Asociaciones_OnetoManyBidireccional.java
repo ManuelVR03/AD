@@ -32,6 +32,11 @@ public class Test3_Asociaciones_OnetoManyBidireccional {
 		emanager.persist(s2);
 		emanager.getTransaction().commit();
 		
+		emanager.getTransaction().begin();
+		l1.addSocio(s1);
+		l2.addSocio(s1);
+		l3.addSocio(s1);
+		emanager.getTransaction().commit();
 		
 			
 			
