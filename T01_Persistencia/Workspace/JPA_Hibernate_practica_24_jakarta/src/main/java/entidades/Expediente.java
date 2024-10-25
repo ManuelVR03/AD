@@ -1,5 +1,6 @@
 package entidades;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import jakarta.persistence.Column;
@@ -11,7 +12,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table (name = "EXPEDIENTE", catalog = "practica")
-public class Expediente {
+public class Expediente implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
