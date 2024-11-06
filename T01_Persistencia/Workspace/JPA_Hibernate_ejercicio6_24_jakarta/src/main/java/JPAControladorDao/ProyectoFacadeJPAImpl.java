@@ -25,5 +25,20 @@ public class ProyectoFacadeJPAImpl extends AbstractFacadeJPAImpl<Proyecto> imple
 		return q.getResultList(); 
 	}
 	
+	@Override
+	public List<Proyecto> buscarProyectosDeDeptoNombre(String depNombre){
+		TypedQuery<Proyecto> q = getEm().createQuery("SELECT p FROM Proyecto p WHERE p.departamento.dnombre"
+				+ "=:seleccionado", Proyecto.class);
+		q.setParameter("seleccionado", depNombre);
+		return q.getResultList(); 
+	}
+	
+	@Override
+	public List<Proyecto> buscarProyectosDeDeptoNombreAnidado(String depNombre){
+		TypedQuery<Proyecto> q = getEm().createQuery("SELECT p FROM Proyecto p WHERE p.departamento.codDep IN (SELECT d.codDep FROM Departamento d WHERE d.dnombre=:seleccionado)", Proyecto.class);
+		q.setParameter("seleccionado", depNombre);
+		return q.getResultList(); 
+	}
+	
 
 }

@@ -3,6 +3,7 @@ package JPAControladorDao;
 import java.util.List;
 
 import entidades.Empleado;
+import entidades.Proyecto;
 import jakarta.persistence.TypedQuery;
 
 public class EmpleadoFacadeJPAImpl extends AbstractFacadeJPAImpl<Empleado> implements EmpleadoFacadeJPA {

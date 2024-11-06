@@ -8,14 +8,24 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.NamedQueries;
+import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "DEPARTAMENTO", catalog = "ejercicio6")
+
+@NamedQueries({
+	@NamedQuery(name = Departamento.BUSCAR_CODDEPT, query = "SELECT d FROM Departamento d WHERE d.codDep = :cod"),
+	@NamedQuery(name = Departamento.ORDENAR_DESC_NOMBRE, query = "SELECT d FROM Departamento d ORDER BY d.dnombre DESC")
+})
 public class Departamento implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
+	public static final String BUSCAR_CODDEPT = "Departamento.BUSCAR_CODDEPT";
+	public static final String ORDENAR_DESC_NOMBRE = "Departamento.ORDENAR_DESC_NOMBRE";
 
 	@Id
 	@Column(name = "CODDEPT", unique = true, nullable = false)

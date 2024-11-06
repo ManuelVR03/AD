@@ -6,15 +6,19 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Query;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "EMPLEADO", catalog = "ejercicio6")
+@NamedQuery(name="Empleado.findAll", query = "SELECT e FROM Empleado e")
 public class Empleado implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+
+	public static final String BUSCAR_TODOS_EMPLEADOS = "Empleado.findAll";
 
 	@Id
 	@Column(name = "CODEMPLEADO", unique = true, nullable = false)

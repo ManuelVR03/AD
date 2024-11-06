@@ -24,4 +24,7 @@
     <fullyQualifiedTypeName name="JPAControladorDao.GrupoFacadeJPAImpl"/>
     <fullyQualifiedTypeName name="JPAControladorDao.ExpedienteFacadeJPAImpl"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Query"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.NamedQuery"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.NamedQueries"/>
 </qualifiedTypeNameHistroy>
