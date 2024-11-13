@@ -22,11 +22,13 @@
     <fullyQualifiedTypeName name="JPAControladorDao.AlumnoFacadeJPAImpl"/>
     <fullyQualifiedTypeName name="JPAControladorDao.GrupoFacadeJPAImpl"/>
     <fullyQualifiedTypeName name="JPAControladorDao.ExpedienteFacadeJPAImpl"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Query"/>
     <fullyQualifiedTypeName name="jakarta.persistence.NamedQuery"/>
     <fullyQualifiedTypeName name="jakarta.persistence.NamedQueries"/>
     <fullyQualifiedTypeName name="daos.EmpleadoFacadeJPAImpl"/>
     <fullyQualifiedTypeName name="jakarta.persistence.PrimaryKeyJoinColumn"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Tuple"/>
+    <fullyQualifiedTypeName name="entidades.Entrada"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

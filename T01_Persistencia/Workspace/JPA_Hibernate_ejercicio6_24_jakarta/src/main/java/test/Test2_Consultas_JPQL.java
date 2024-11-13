@@ -4,6 +4,8 @@ import java.util.List;
 
 import entidades.*;
 import jakarta.persistence.Query;
+import jakarta.persistence.Tuple;
+import jakarta.persistence.TypedQuery;
 import JPAControladorDao.*;
 
 public class Test2_Consultas_JPQL {
@@ -85,6 +87,44 @@ public class Test2_Consultas_JPQL {
 		Query query4 = dpf.getEm().createNamedQuery(Departamento.ORDENAR_DESC_NOMBRE);
 		System.out.println(query3.getResultList());
 		System.out.println(query4.getResultList());
+		
+		/*
+		 * Ejercicio 6: Consulta que devuelva el máximo y el mínimo código de empleado
+		 */
+		
+		/*
+		 * SELECT MAX(e.codEmpleado), MIN(e.codEmpleado) FROM Empleado e
+		 */
+		
+		System.out.println();
+		System.out.println("*** Ejercicio 6 ***");
+		TypedQuery<Tuple> queryEj6 = ef.getEm().createQuery("SELECT MAX(e.codEmpleado), MIN(e.codEmpleado) FROM Empleado e", Tuple.class);
+		Tuple queryResult = queryEj6.getSingleResult();
+		System.out.println("El max es: " + queryResult.get(0) + " El min es: " + queryResult.get(1));
+		
+		/*
+		 * Ejercicio 7: consulta que devuelva el nombre y apellidos de los empleados.
+		 */
+		
+		System.out.println();
+		System.out.println("*** Ejercicio 7 ***");
+		TypedQuery<Tuple> queryEj7 = ef.getEm().createQuery("SELECT e.nombre, e.apellidos FROM Empleado e", Tuple.class);
+		List<Tuple> queryList7 = queryEj7.getResultList();
+		for (Tuple empleado: queryList7)
+			System.out.println(empleado.get(0) + " " + empleado.get(1));
+		//Query prueba = ef.getEm().createQuery("SELECT e.nombre, e.apellidos FROM Empleado e", Tuple.class);
+		//System.out.println(prueba.getResultList());
+		
+		/*
+		 * Ejercicio 8: Crea una consulta nativa de SQL que devuelva todas las direcciones
+		 */
+		
+		System.out.println();
+		System.out.println("*** Ejercicio 8 ***");
+		Query query8 = df.getEm().createNativeQuery("SELECT * FROM DIRECCION", Direccion.class);
+		System.out.println(query8.getResultList());
+		
+		
 		
 		
 	}
