@@ -18,7 +18,6 @@
     <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="JPAControladorDao.AlumnoFacadeJPAImpl"/>
     <fullyQualifiedTypeName name="JPAControladorDao.GrupoFacadeJPAImpl"/>
     <fullyQualifiedTypeName name="JPAControladorDao.ExpedienteFacadeJPAImpl"/>
@@ -31,4 +30,7 @@
     <fullyQualifiedTypeName name="jakarta.persistence.Tuple"/>
     <fullyQualifiedTypeName name="entidades.Entrada"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.text.ParseException"/>
 </qualifiedTypeNameHistroy>
