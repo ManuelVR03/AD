@@ -8,7 +8,6 @@
     <fullyQualifiedTypeName name="JPAControladorDao.LibroFacadeImpl"/>
     <fullyQualifiedTypeName name="JPAControladorDao.SocioFacadeImpl"/>
     <fullyQualifiedTypeName name="jakarta.persistence.OneToOne"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.TypedQuery"/>
     <fullyQualifiedTypeName name="jakarta.persistence.OneToMany"/>
     <fullyQualifiedTypeName name="entidades.Empleado"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
@@ -29,8 +28,10 @@
     <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Tuple"/>
     <fullyQualifiedTypeName name="entidades.Entrada"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.text.ParseException"/>
+    <fullyQualifiedTypeName name="entidades.Equipo"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.TypedQuery"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
