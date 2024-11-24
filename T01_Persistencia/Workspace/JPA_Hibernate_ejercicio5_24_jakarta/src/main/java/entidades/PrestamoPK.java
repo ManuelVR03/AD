@@ -15,7 +15,7 @@ public class PrestamoPK implements Serializable {
 	@Column(name="id_socio", insertable=false, updatable=false)
 	private int idSocio;
 
-	@Column(insertable=false, updatable=false)
+	@Column(name="isbn", insertable=false, updatable=false)
 	private String isbn;
 
 	@Temporal(TemporalType.DATE)

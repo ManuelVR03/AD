@@ -2,6 +2,10 @@
 <<<<<<<=HEAD
 >>>>>>>=210344a (Actualizar archivos de configuraci\u00C3\u00B3n y registros de versi\u00C3\u00B3n)
 eclipse.preferences.version=1
+<<<<<<< HEAD
 platformState=1730805187429
+=======
+platformState=1727548366925
+>>>>>>> 9b90e09 (Actualizar archivos de configuración y corregir nombre de columna en PrestamoPK)
 quickStart=false
 tipsAndTricks=true
