@@ -26,12 +26,13 @@
     <fullyQualifiedTypeName name="daos.EmpleadoFacadeJPAImpl"/>
     <fullyQualifiedTypeName name="jakarta.persistence.PrimaryKeyJoinColumn"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Tuple"/>
     <fullyQualifiedTypeName name="entidades.Entrada"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.text.ParseException"/>
     <fullyQualifiedTypeName name="entidades.Equipo"/>
     <fullyQualifiedTypeName name="jakarta.persistence.TypedQuery"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Tuple"/>
+    <fullyQualifiedTypeName name="org.hibernate.mapping.List"/>
     <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
