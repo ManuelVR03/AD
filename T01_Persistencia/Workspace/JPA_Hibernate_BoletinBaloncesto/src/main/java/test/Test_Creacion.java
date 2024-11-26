@@ -37,7 +37,7 @@ public class Test_Creacion {
 		
 		System.out.println();
 		System.out.println("*** Consulta 2: ***");
-		TypedQuery<Tuple> query2 = ef.getEm().createQuery("SELECT DISTINCT tej.equipo.nombreEquipo, tej.salario FROM TempEquipoJugador AS tej WHERE tej.jugadore.nombreJugador = 'Rafa Martinez'", Tuple.class);
+		TypedQuery<Tuple> query2 = ef.getEm().createQuery("SELECT DISTINCT tej.equipo.nombreEquipo, tej.salario FROM TempEquipoJugador AS tej WHERE tej.jugadore.nombreJugador = 'Rafa Martinez' AND tej.temporada.nombre = '2009_2010'", Tuple.class);
 		List<Tuple> resultQuery2 = query2.getResultList();
 		DecimalFormat formato = new DecimalFormat("#,###");
 		System.out.println("El Sr Rafael Martinez jugó en: ");
@@ -50,7 +50,7 @@ public class Test_Creacion {
 		
 		System.out.println();
 		System.out.println("*** Consulta 3: ***");
-		TypedQuery<Tuple> query3 = ef.getEm().createQuery("SELECT DISTINCT tej.jugadore.nombreJugador FROM TempEquipoJugador AS tej WHERE (SELECT DISTINCT tej2.equipo FROM TempEquipoJugador AS tej2 WHERE tej2.jugadore = tej.jugadore AND tej2.temporada.codTemp = 't1' LIMIT 1) <> (SELECT DISTINCT tej3.equipo FROM TempEquipoJugador AS tej3 WHERE tej3.jugadore = tej.jugadore AND tej3.temporada.codTemp = 't2' LIMIT 1)", Tuple.class);
+		TypedQuery<Tuple> query3 = ef.getEm().createQuery("SELECT tej.jugadore.nombreJugador FROM TempEquipoJugador AS tej", Tuple.class);
 		List<Tuple> resultQuery3 = query3.getResultList();
 		for(Tuple t: resultQuery3) {
 			System.out.println("EL jugador " + t.get(0) + " se ha cambiado de equipo.");
