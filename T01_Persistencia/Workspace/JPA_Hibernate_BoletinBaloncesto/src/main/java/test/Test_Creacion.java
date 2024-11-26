@@ -50,7 +50,7 @@ public class Test_Creacion {
 		
 		System.out.println();
 		System.out.println("*** Consulta 3: ***");
-		TypedQuery<Tuple> query3 = ef.getEm().createQuery("SELECT tej.jugadore.nombreJugador FROM TempEquipoJugador AS tej", Tuple.class);
+		TypedQuery<Tuple> query3 = ef.getEm().createQuery("SELECT tej.jugadore.nombreJugador FROM TempEquipoJugador AS tej WHERE tej.temporada.nombre = '2010_2011' GROUP BY tej.jugadore.nombreJugador HAVING COUNT(DISTINCT tej.equipo) > 1", Tuple.class);
 		List<Tuple> resultQuery3 = query3.getResultList();
 		for(Tuple t: resultQuery3) {
 			System.out.println("EL jugador " + t.get(0) + " se ha cambiado de equipo.");
@@ -60,15 +60,40 @@ public class Test_Creacion {
 		 * de equipo en la misma temporada . Muestra el nombre del jugador, la temporada
 		 * y el no de veces que ha cambiado.(2 PUNTOS) */
 		
+		System.out.println();
+		System.out.println("*** Consulta 4: ***");
+		TypedQuery<Tuple> query4 = ef.getEm().createQuery("SELECT DISTINCT tej.jugadore.nombreJugador, tej.temporada.nombre, COUNT(tej.equipo) FROM TempEquipoJugador AS tej GROUP BY tej.jugadore.nombreJugador, tej.temporada.nombre HAVING COUNT(DISTINCT tej.equipo) > 1", Tuple.class);
+		List<Tuple> resultQuery4 = query4.getResultList();
+		for(Tuple t: resultQuery4) {
+			System.out.println("El jugador " + t.get(0) + " en la temporada " + t.get(1) + " ha cambiado " + t.get(2) + " veces de equipo");
+		}
+		
 		 /* 5) Obener un listado de los
 		 * jugadores que no han cambiado de equipo nunca.En el listado tiene que
 		 * aparecer el código y nombre de dicho jugador. (1 PUNTO ) */
+		
+		System.out.println();
+		System.out.println("*** Consulta 5: ***");
+		TypedQuery<Tuple> query5 = ef.getEm().createQuery("SELECT tej.jugadore.codJugador, tej.jugadore.nombreJugador FROM TempEquipoJugador AS tej GROUP BY tej.jugadore.codJugador, tej.jugadore.nombreJugador HAVING COUNT(DISTINCT tej.equipo) = 1", Tuple.class);
+		List<Tuple> resultQuery5 = query5.getResultList();
+		for(Tuple t: resultQuery5) {
+			System.out.println("Código " + t.get(0) + " de nombre " + t.get(1) + " no ha cambiado de equipo nunca");
+		}
 		
 		 /* 6) Obtener los
 		 * códigos de los jugadores que jueguen en el equipo 'e1' donde su sueldo maximo
 		 * en cualquier temporada sea menor o igual que el menor sueldo de cualquier
 		 * jugador de la temporada 't2'. (2 PUNTOS)
 		 */
+		
+		System.out.println();
+		System.out.println("*** Consulta 6: ***");
+		TypedQuery<Tuple> query6 = ef.getEm().createQuery("SELECT tej.jugadore.codJugador FROM TempEquipoJugador AS tej WHERE tej.equipo.codEquipo = :equipo GROUP BY tej.jugadore.codJugador HAVING MAX(tej.salario) <= (SELECT MIN(tej2.salario) FROM TempEquipoJugador AS tej2 WHERE tej2.temporada.codTemp = :temporada)", Tuple.class);
+		query6.setParameter("equipo", "e1").setParameter("temporada", "t2");
+		List<Tuple> resultQuery6 = query6.getResultList();
+		for(Tuple t: resultQuery6) {
+			System.out.println("Código jugador -> " + t.get(0));
+		}
 	}
 
 }
