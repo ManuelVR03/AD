@@ -38,15 +38,21 @@ public class Test_Cine {
 
 		System.out.println();
 		System.out.println("*** Ejercicio 2 ***");
-		TypedQuery<Tuple> query2 = plf.getEm()
+		/*TypedQuery<Tuple> query2 = plf.getEm()
 				.createQuery(
 						"SELECT pl.titulo, pl.codpelicula, COUNT(DISTINCT p.codpase), SUM(e.pvp) FROM Pelicula AS pl "
 								+ "JOIN pl.pases AS p JOIN p.entradas AS e GROUP BY pl.titulo, pl.codpelicula",
-						Tuple.class);
+						Tuple.class);*/
+		TypedQuery<Tuple> query2 = plf.getEm().createQuery("SELECT DISTINCT p.titulo, p.codpelicula, COUNT(DISTINCT ps.codpase), SUM(e.pvp) FROM Pelicula AS p LEFT JOIN p.pases AS ps LEFT JOIN ps.entradas AS e GROUP BY p.titulo, p.codpelicula ORDER BY p.codpelicula", Tuple.class);
 		List<Tuple> resultQuery2 = query2.getResultList();
+		Object pvp;
 		for (Tuple item : resultQuery2) {
+			if(item.get(3) == null) {
+				pvp = 0;
+			}else
+				pvp = item.get(3);
 			System.out.println("Título: " + item.get(0) + " Código: " + item.get(1) + " Número de Pases: " + item.get(2)
-					+ " Recaudación: " + item.get(3) + "€");
+					+ " Recaudación: " + pvp + "€");
 		}
 
 		/*
