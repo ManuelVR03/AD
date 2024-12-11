@@ -88,4 +88,12 @@ public class Pelicula implements Serializable {
 		return pase;
 	}
 
+	@Override
+	public String toString() {
+		return "Pelicula [codpelicula=" + codpelicula + ", fechaProd=" + fechaProd + ", genero=" + genero + ", titulo="
+				+ titulo + "]";
+	}
+	
+	
+
 }
