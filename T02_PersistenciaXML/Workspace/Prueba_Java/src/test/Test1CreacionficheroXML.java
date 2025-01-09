@@ -22,11 +22,12 @@ public class Test1CreacionficheroXML {
 			DomXML documentoNuevo = new DomXML();
 			crearDocumentoDesdeCero(documentoNuevo);
 			documentoNuevo.escribirArchivo("./Salidas/entradas.xml");
-			System.out.println(documentoNuevo.convertirString());
-			documentoNuevo.escribirArchivo();
+			// System.out.println(documentoNuevo.convertirString());
+			// documentoNuevo.escribirArchivo(System.out);
 		} catch (ParserConfigurationException e) {
 			e.printStackTrace();
 		} catch (TransformerException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
