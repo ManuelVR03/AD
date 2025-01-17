@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<clase>
+  	
+  <estudiante rollno="393">
+    		
+    <apellido> Luces </apellido>
+    		
+    <apellido> Zara </apellido>
+    		
+    <apodo> Luz </apodo>
+    		
+    <marcas> 85 </marcas>
+    	
+  </estudiante>
+  	
+  <estudiante rollno="493">
+    		
+    <apellido> Vinola </apellido>
+    		
+    <apellido> Guma </apellido>
+    		
+    <apodo> Vinni </apodo>
+    		
+    <marcas> 95 </marcas>
+    	
+    <Beca>Si</Beca>
+  </estudiante>
+  	
+  <estudiante rollno="593">
+    		
+    <apellido> Culto </apellido>
+    		
+    <apellido> Rus </apellido>
+    		
+    <apodo> Cul </apodo>
+    		
+    <marcas> 90 </marcas>
+    	
+  </estudiante>
+  
+</clase>
