@@ -59,14 +59,20 @@ public class Test3BusquedaModificacionXML {
 			// Añade una nueva etiqueta llamada beca a ese estudiante.
 			// Crea estudiantesmodificado.xml con esta nueva información
 			// Muestralo en pantalla
-			System.out.println("******************************************************************************");
+			/*System.out.println("******************************************************************************");
 			Document nuevoDocumento = documento.getDocumento();
 			Element beca = nuevoDocumento.createElement("Beca");
 			beca.setTextContent("Si");
 			nodoClase2.appendChild(beca);
 			documento.escribirArchivo("./Salidas/estudiantesmodificado.xml");
 			DomXML nuevoDocumentoLectura = new DomXML("./Salidas/estudiantesmodificado.xml");
-			System.out.println(nuevoDocumentoLectura.convertirString());
+			System.out.println(nuevoDocumentoLectura.convertirString());*/
+			System.out.println("******************************************************************************");
+			Element beca = documento.getDocumento().createElement("Beca");
+			beca.setTextContent("Si");
+			nodoClase2.appendChild(beca);
+			documento.escribirArchivo("./Salidas/estudiantesmodificado.xml");
+			System.out.println(documento.convertirString());
 			
 		}catch(ParserConfigurationException e) {
 			e.printStackTrace();

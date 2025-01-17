@@ -8,6 +8,10 @@
 	  <maven.compiler.source>17</maven.compiler.source>
   </properties>
   <dependencies>
-	  
+	  <dependency>
+		  <groupId>jakarta.xml.bind</groupId>
+		  <artifactId>jakarta.xml.bind-api</artifactId>
+		  <version>4.0.2</version>
+	  </dependency>
   </dependencies>
 </project>
