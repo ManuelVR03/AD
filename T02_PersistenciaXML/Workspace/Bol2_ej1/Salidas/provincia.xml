@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<provincia>
+    <localidad>
+        <cp>28028</cp>
+        <nombre>Madrid</nombre>
+    </localidad>
+    <localidad>
+        <cp>28820</cp>
+        <nombre>Coslada</nombre>
+    </localidad>
+    <nombre>Madrid</nombre>
+</provincia>

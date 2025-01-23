@@ -23,6 +23,12 @@ public class Localidad {
 	public void setCp(int cp) {
 		this.cp = cp;
 	}
+	@Override
+	public String toString() {
+		return "Localidad [nombre=" + nombre + ", cp=" + cp + "]";
+	}
+	
+	
 	
 	
 }
