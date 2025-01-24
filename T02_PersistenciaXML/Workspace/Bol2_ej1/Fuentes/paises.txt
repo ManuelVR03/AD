@@ -1,0 +1,4 @@
+España, Madrid, 1912-12-12, Europa, 700000, 1
+Alemania, Berlin, 1962-12-12, Europa, 600000, 1
+Francia, Paris, 1999-10-22, Europa, 560000, 1
+Italia, Roma, 1998-11-12, Europa, 120000, 1
