@@ -25,8 +25,6 @@ public class Test_JAXBSerializacion {
 		FileOutputStream fos = new FileOutputStream(PROVINCIA_DAT_FILE);
 		marshaller.marshal(pais, fos);
 		fos.close();
-		
-		
 
 	}
 	
@@ -34,7 +32,7 @@ public class Test_JAXBSerializacion {
 		Pais pais = new Pais();
 		pais.setNombre("España");
         pais.setCapital("Madrid");
-        pais.setFechaCenso(LocalDate.of(2023, 1, 1));
+        pais.setFechaCenso(LocalDate.now());
         pais.setContinente("Europa");
         pais.setHabitantes(47450795);
         pais.setImportancia(5);

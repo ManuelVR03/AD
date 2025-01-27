@@ -2,9 +2,14 @@ package ejercicio4_JABX;
 
 import java.time.LocalDate;
 
+import adaptador.AdaptadorFecha;
 import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlTransient;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlRootElement
+@XmlType(propOrder = {"nombre", "capital", "fechaCenso", "continente", "habitantes", "importancia"})
 public class Pais {
 	private String nombre;
 	private String capital;
@@ -33,6 +38,7 @@ public class Pais {
 		this.capital = capital;
 	}
 
+	@XmlJavaTypeAdapter(AdaptadorFecha.class)
 	public LocalDate getFechaCenso() {
 		return fechaCenso;
 	}

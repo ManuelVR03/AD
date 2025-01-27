@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <pais>
+    <nombre>España</nombre>
     <capital>Madrid</capital>
+    <fechaCenso>2025-01-26</fechaCenso>
     <continente>Europa</continente>
-    <fechaCenso/>
     <habitantes>47450795</habitantes>
     <importancia>5</importancia>
-    <nombre>España</nombre>
 </pais>
