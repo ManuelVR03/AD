@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<personas>
+    
+  <persona>
+        
+    <nombre>Javier Mendoza Jimenez</nombre>
+        
+    <edad>28</edad>
+        
+    <soltero>Soltero</soltero>
+      
+  </persona>
+    
+  <persona>
+        
+    <nombre>Salvador Buena</nombre>
+        
+    <edad>21</edad>
+        
+    <soltero>Casado</soltero>
+      
+  </persona>
+    
+  <persona>
+        
+    <nombre>Lucía Villar</nombre>
+        
+    <edad>19</edad>
+        
+    <soltero>Soltero</soltero>
+      
+  </persona>
+  
+</personas>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Personas>
+    <personas>
+        <nombre>Javier Mendoza Jimenez</nombre>
+        <edad>28</edad>
+        <soltero>true</soltero>
+    </personas>
+    <personas>
+        <nombre>Salvador Buena</nombre>
+        <edad>21</edad>
+        <soltero>false</soltero>
+    </personas>
+    <personas>
+        <nombre>Jose Angulo</nombre>
+        <edad>19</edad>
+        <soltero>true</soltero>
+    </personas>
+</Personas>
