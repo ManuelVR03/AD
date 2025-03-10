@@ -1,0 +1,33 @@
+
+    sudo apt update
+    sudo apt install mysql-server
+    sudo mysql_secure_installation
+        N
+        usuarios anónimos Y
+        deshabilitar servicios root Y
+        Eliminar BD Y
+        cargar nuevas reglas Y
+        
+    
+    
+    en terminal
+        sudo mysql
+        mysql> create user usuario identified by 'usuario';
+        mysql> grant all privileges on *.* to 'usuario';
+        mysql>exit
+        
+        
+        sudo snap install mysql-workbench-community
+        
+        snap connect mysql-workbench-community:password-manager-service
+        snap connect mysql-workbench-community:ssh-keys
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
